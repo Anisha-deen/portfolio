@@ -1,8 +1,13 @@
-// ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
+const scrollProgress = document.getElementById('scrollProgress');
 
 window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  scrollProgress.style.width = scrolled + "%";
+
   if (window.scrollY > 60) {
     navbar.classList.add('scrolled');
     backToTop.classList.add('visible');
@@ -26,24 +31,68 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// ===== SCROLL REVEAL =====
-const revealEls = document.querySelectorAll('.skill-card, .exp-card, .project-card, .contact-item, .about-content, .about-visual, .hero-badge, .hero-stats');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
+// ===== RUNNING NUMBERS =====
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const isPlus = end.toString().includes('+');
+  const endVal = parseInt(end.toString().replace('+', ''));
+  
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const currentVal = Math.floor(progress * (endVal - start) + start);
+    obj.innerHTML = currentVal + (isPlus ? '+' : '');
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
     }
-  });
-}, { threshold: 0.1 });
+  };
+  window.requestAnimationFrame(step);
+}
 
-revealEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
+window.addEventListener('load', () => {
+  const stats = document.querySelectorAll('.stat-num');
+  stats.forEach(stat => {
+    const target = stat.textContent.trim();
+    animateValue(stat, 0, target, 2000);
+  });
+});
+
+// ===== MAGNETIC BUTTONS =====
+const magneticBtns = document.querySelectorAll('.btn, .nav-cta, .contact-item');
+
+magneticBtns.forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    
+    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+  
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+});
+
+// ===== CURSOR TRAIL (SUBTLE) =====
+const cursor = document.createElement('div');
+cursor.className = 'custom-cursor';
+document.body.appendChild(cursor);
+
+const blobs = document.querySelectorAll('.blob');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  
+  // Parallax blobs
+  const x = (window.innerWidth / 2 - e.clientX) / 25;
+  const y = (window.innerHeight / 2 - e.clientY) / 25;
+  
+  blobs.forEach((blob, index) => {
+    const factor = (index + 1) * 0.5;
+    blob.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+  });
 });
 
 // ===== ACTIVE NAV LINK =====
