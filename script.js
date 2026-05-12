@@ -109,26 +109,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ===== CONTACT FORM =====
-const form = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  submitBtn.textContent = 'Sending...';
-  submitBtn.disabled = true;
-  setTimeout(() => {
-    submitBtn.textContent = '✓ Message Sent!';
-    submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-    form.reset();
-    setTimeout(() => {
-      submitBtn.textContent = 'Send Message →';
-      submitBtn.style.background = '';
-      submitBtn.disabled = false;
-    }, 3000);
-  }, 1200);
-});
-
 // ===== TYPING EFFECT ON HERO ROLE =====
 const heroRole = document.querySelector('.hero-role');
 const roles = [
