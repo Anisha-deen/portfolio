@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anisha Farveen | React Native & Full Stack Developer</title>
-  <meta name="description" content="Anisha Farveen is a React Native & Full Stack Developer from Coimbatore specializing in real-time apps, mobile development, and scalable web systems." />
-  <meta name="keywords" content="React Native Developer, Full Stack Developer, Mobile App Developer, Coimbatore, TypeScript, Node.js, Socket.IO" />
+  <meta name="description"
+    content="Anisha Farveen is a React Native & Full Stack Developer from Coimbatore specializing in real-time apps, mobile development, and scalable web systems." />
+  <meta name="keywords"
+    content="React Native Developer, Full Stack Developer, Mobile App Developer, Coimbatore, TypeScript, Node.js, Socket.IO" />
   <meta property="og:title" content="Anisha Farveen | React Native & Full Stack Developer" />
-  <meta property="og:description" content="Building real-time apps, mobile experiences, and scalable full-stack systems." />
+  <meta property="og:description"
+    content="Building real-time apps, mobile experiences, and scalable full-stack systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- NAV -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#home" class="nav-logo"><span class="logo-bracket">&lt;</span>Anisha<span class="logo-dot">/</span><span class="logo-bracket">&gt;</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Hire me</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo"><span class="logo-bracket">&lt;</span>Anisha<span class="logo-dot">/</span><span
+          class="logo-bracket">&gt;</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="mobile-only"><a href="#contact" class="nav-cta-mobile">Hire me</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire me</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg">
-    <div class="grid-overlay"></div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-  </div>
-  <div class="hero-container hero-flex">
-    <div class="hero-content">
-      <div class="hero-status-pill">AVAILABLE FOR WORK</div>
-      <h1 class="hero-main-title">Hi, I'm <span class="accent-text">Anisha</span></h1>
-      <p class="hero-description"><strong>React Native & Full Stack Developer</strong>. I build high-impact mobile experiences and scalable full-stack systems that users love.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View my work <span class="arrow-down">↓</span></a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-container hero-flex">
+      <div class="hero-content">
+        <div class="hero-status-pill">AVAILABLE FOR WORK</div>
+        <h1 class="hero-main-title">Hi, I'm <span class="accent-text">Anisha</span></h1>
+        <p class="hero-description">I am a <span class="hero-role"></span>. I build high-impact mobile
+          experiences and scalable full-stack systems that users love.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View my work <span class="arrow-down">↓</span></a>
+          <a href="resume.pdf" class="btn btn-outline" download>Resume <span class="download-icon">📥</span></a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects Shipped</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Technologies</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects Shipped</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Technologies</span></div>
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <img src="assets/portfolio.png" alt="Anisha Farveen" class="profile-img" />
+        </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="profile-frame">
-        <img src="assets/portfolio.png" alt="Anisha Farveen" class="profile-img" />
-      </div>
+    <div class="scroll-indicator"><span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
-  </div>
-  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">01 / About</span>
-      <h2 class="section-title">Who I Am</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-visual">
-        <div class="about-card">
-          <div class="code-block">
-            <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-filename">anisha.ts</span></div>
-            <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="code-block">
+              <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span
+                  class="dot green"></span><span class="code-filename">anisha.ts</span></div>
+              <pre class="code-body"><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = {
   <span class="c-key">name</span>: <span class="c-str">"Anisha Farveen"</span>,
   <span class="c-key">role</span>: <span class="c-str">"Full Stack Developer"</span>,
   <span class="c-key">location</span>: <span class="c-str">"Coimbatore, TN"</span>,
@@ -89,387 +105,719 @@
   ],
   <span class="c-key">status</span>: <span class="c-str">"actively building"</span>
 };</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="about-content">
-        <p class="about-text">I'm a <strong>React Native & Full Stack Developer</strong> based in Coimbatore, Tamil Nadu, passionate about building applications that are fast, functional, and built to scale.</p>
-        <p class="about-text">My work spans mobile-first apps, real-time communication systems, and full-stack web platforms. I enjoy the challenge of turning complex product requirements into clean, maintainable code — whether that's integrating <strong>Socket.IO</strong> for live chat, implementing <strong>Agora SDK</strong> for in-app calling, or architecting multi-tenant SaaS backends.</p>
-        <p class="about-text">I'm a proactive learner who keeps up with modern development practices. I bring both <strong>technical depth</strong> and a <strong>product mindset</strong> — I don't just write code, I think about user experience, system design, and long-term maintainability.</p>
-        <div class="about-highlights">
-          <div class="highlight-item"><span class="hi-icon">⚡</span><span>Real-time systems with Socket.IO & WebRTC</span></div>
-          <div class="highlight-item"><span class="hi-icon">📱</span><span>Cross-platform mobile apps with React Native</span></div>
-          <div class="highlight-item"><span class="hi-icon">🏗️</span><span>Full-stack architecture with Node.js & PHP</span></div>
-          <div class="highlight-item"><span class="hi-icon">🎯</span><span>Problem-solver with a product-first approach</span></div>
-        </div>
-        <div class="about-cta">
-          <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="resume.pdf" class="btn btn-ghost" download>Download Resume</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills" id="skills">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">02 / Skills</span>
-      <h2 class="section-title">Tech Stack</h2>
-    </div>
-    <div class="skills-wrapper">
-      <div class="skills-track track-left">
-        <!-- Skill 1 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">🖥️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Frontend</h3>
-            <div class="skill-tags">
-              <span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
             </div>
           </div>
         </div>
-        <!-- Skill 2 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">📱</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Mobile</h3>
-            <div class="skill-tags">
-              <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
-            </div>
+        <div class="about-content">
+          <p class="about-text">I'm a <strong>React Native & Full Stack Developer</strong> based in Coimbatore, Tamil
+            Nadu, passionate about building applications that are fast, functional, and built to scale.</p>
+          <p class="about-text">My work spans mobile-first apps, real-time communication systems, and full-stack web
+            platforms. I enjoy the challenge of turning complex product requirements into clean, maintainable code —
+            whether that's integrating <strong>Socket.IO</strong> for live chat, implementing <strong>Agora SDK</strong>
+            for in-app calling, or architecting multi-tenant SaaS backends.</p>
+          <p class="about-text">I'm a proactive learner who keeps up with modern development practices. I bring both
+            <strong>technical depth</strong> and a <strong>product mindset</strong> — I don't just write code, I think
+            about user experience, system design, and long-term maintainability.</p>
+          <div class="about-highlights">
+            <div class="highlight-item"><span class="hi-icon">⚡</span><span>Real-time systems with Socket.IO &
+                WebRTC</span></div>
+            <div class="highlight-item"><span class="hi-icon">📱</span><span>Cross-platform mobile apps with React
+                Native</span></div>
+            <div class="highlight-item"><span class="hi-icon">🏗️</span><span>Full-stack architecture with Node.js &
+                PHP</span></div>
+            <div class="highlight-item"><span class="hi-icon">🎯</span><span>Problem-solver with a product-first
+                approach</span></div>
           </div>
-        </div>
-        <!-- Skill 3 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">⚙️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Backend</h3>
-            <div class="skill-tags">
-              <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PHP</span>
-            </div>
-          </div>
-        </div>
-        <!-- Skill 4 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">🗄️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Database</h3>
-            <div class="skill-tags">
-              <span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">phpMyAdmin</span>
-            </div>
-          </div>
-        </div>
-        <!-- Skill 5 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">⚡</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Real-Time</h3>
-            <div class="skill-tags">
-              <span class="tag">Socket.IO</span><span class="tag">WebRTC</span><span class="tag">Agora</span>
-            </div>
-          </div>
-        </div>
-        <!-- Skill 6 -->
-        <div class="skill-card">
-          <div class="skill-icon-box">🛠️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Tools</h3>
-            <div class="skill-tags">
-              <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Postman</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Duplicates for Loop -->
-        <div class="skill-card">
-          <div class="skill-icon-box">🖥️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Frontend</h3>
-            <div class="skill-tags">
-              <span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon-box">📱</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Mobile</h3>
-            <div class="skill-tags">
-              <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon-box">⚙️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Backend</h3>
-            <div class="skill-tags">
-              <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PHP</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon-box">🗄️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Database</h3>
-            <div class="skill-tags">
-              <span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">phpMyAdmin</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon-box">⚡</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Real-Time</h3>
-            <div class="skill-tags">
-              <span class="tag">Socket.IO</span><span class="tag">WebRTC</span><span class="tag">Agora</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon-box">🛠️</div>
-          <div class="skill-info">
-            <h3 class="skill-category">Tools</h3>
-            <div class="skill-tags">
-              <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Postman</span>
-            </div>
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="resume.pdf" class="btn btn-ghost" download>Download Resume</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EXPERIENCE -->
-<section class="experience" id="experience">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">03 / Experience</span>
-      <h2 class="section-title">Where I've Worked</h2>
+  <!-- IMPACT / ACHIEVEMENTS -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item reveal">
+          <div class="impact-stat">
+            <span class="impact-num" data-target="3">0</span><span class="impact-plus">+</span>
+          </div>
+          <p class="impact-label">Production Applications Built</p>
+        </div>
+        <div class="impact-item reveal">
+          <div class="impact-stat">
+            <span class="impact-num" data-target="2">0</span>
+          </div>
+          <p class="impact-label">Industry Internships Completed</p>
+        </div>
+        <div class="impact-item reveal">
+          <div class="impact-stat">
+            <span class="impact-num" data-target="100">0</span><span class="impact-plus">%</span>
+          </div>
+          <p class="impact-label">Real-time System Concurrency</p>
+        </div>
+        <div class="impact-item reveal">
+          <div class="impact-stat">
+            <span class="impact-num" data-target="8">0</span><span class="impact-plus">+</span>
+          </div>
+          <p class="impact-label">Core Technologies Mastered</p>
+        </div>
+      </div>
     </div>
-    <div class="timeline">
-      <div class="timeline-item active">
-        <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
-        <div class="exp-card">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-title">Web Developer Intern</h3>
-              <p class="exp-company">El Codamics</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skills-track track-left">
+          <!-- Skill 1 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">🖥️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Frontend</h3>
+              <div class="skill-tags">
+                <span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+              </div>
             </div>
-            <!-- <div class="exp-meta">
+          </div>
+          <!-- Skill 2 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">📱</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Mobile</h3>
+              <div class="skill-tags">
+                <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 3 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">⚙️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Backend</h3>
+              <div class="skill-tags">
+                <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PHP</span>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 4 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">🗄️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Database</h3>
+              <div class="skill-tags">
+                <span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">phpMyAdmin</span>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 5 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">⚡</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Real-Time</h3>
+              <div class="skill-tags">
+                <span class="tag">Socket.IO</span><span class="tag">WebRTC</span><span class="tag">Agora</span>
+              </div>
+            </div>
+          </div>
+          <!-- Skill 6 -->
+          <div class="skill-card">
+            <div class="skill-icon-box">🛠️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Tools</h3>
+              <div class="skill-tags">
+                <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Postman</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicates for Loop -->
+          <div class="skill-card">
+            <div class="skill-icon-box">🖥️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Frontend</h3>
+              <div class="skill-tags">
+                <span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">📱</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Mobile</h3>
+              <div class="skill-tags">
+                <span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">⚙️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Backend</h3>
+              <div class="skill-tags">
+                <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">🗄️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Database</h3>
+              <div class="skill-tags">
+                <span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">phpMyAdmin</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">⚡</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Real-Time</h3>
+              <div class="skill-tags">
+                <span class="tag">Socket.IO</span><span class="tag">WebRTC</span><span class="tag">Agora</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">🛠️</div>
+            <div class="skill-info">
+              <h3 class="skill-category">Tools</h3>
+              <div class="skill-tags">
+                <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Postman</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item active">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Web Developer Intern</h3>
+                <p class="exp-company">El Codamics</p>
+              </div>
+              <!-- <div class="exp-meta">
               <span class="exp-badge current">Current</span>
               <span class="exp-date">Jan 2026 – Present</span>
             </div> -->
-          </div>
-          <p class="exp-desc">Working on production-grade real-time web and mobile applications, contributing across the full stack — from UI design to backend API integration and live communication features.</p>
-          <ul class="exp-list">
-            <li>Developing cross-platform mobile applications using <strong>React Native</strong> and <strong>TypeScript</strong> with Expo</li>
-            <li>Building real-time chat and presence features using <strong>Socket.IO</strong></li>
-            <li>Integrating <strong>Agora SDK</strong> for in-app audio and video calling functionality</li>
-            <li>Developing RESTful backend APIs with <strong>Node.js</strong>, <strong>PHP</strong>, and <strong>MySQL</strong></li>
-            <li>Crafting responsive, accessible UIs with <strong>React.js</strong> and <strong>Tailwind CSS</strong></li>
-          </ul>
-          <div class="exp-stack">
-            <span class="tag sm">React Native</span><span class="tag sm">React.js</span><span class="tag sm">TypeScript</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora SDK</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span>
+            </div>
+            <p class="exp-desc">Working on production-grade real-time web and mobile applications, contributing across
+              the full stack — from UI design to backend API integration and live communication features.</p>
+            <ul class="exp-list">
+              <li>Developing cross-platform mobile applications using <strong>React Native</strong> and
+                <strong>TypeScript</strong> with Expo</li>
+              <li>Building real-time chat and presence features using <strong>Socket.IO</strong></li>
+              <li>Integrating <strong>Agora SDK</strong> for in-app audio and video calling functionality</li>
+              <li>Developing RESTful backend APIs with <strong>Node.js</strong>, <strong>PHP</strong>, and
+                <strong>MySQL</strong></li>
+              <li>Crafting responsive, accessible UIs with <strong>React.js</strong> and <strong>Tailwind CSS</strong>
+              </li>
+            </ul>
+            <div class="exp-stack">
+              <span class="tag sm">React Native</span><span class="tag sm">React.js</span><span
+                class="tag sm">TypeScript</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora
+                SDK</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span
+                class="tag sm">MySQL</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker"><div class="marker-dot"></div></div>
-        <div class="exp-card">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-title">Web Developer Intern</h3>
-              <p class="exp-company">Accent Techno Soft</p>
-            </div>
-            <!-- <div class="exp-meta">
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Web Developer Intern</h3>
+                <p class="exp-company">Accent Techno Soft</p>
+              </div>
+              <!-- <div class="exp-meta">
               <span class="exp-date">Jan 2025 – Feb 2025</span>
             </div> -->
+            </div>
+            <p class="exp-desc">Contributed to UI development tasks, implementing pixel-perfect layouts and responsive
+              designs as part of a collaborative development team.</p>
+            <ul class="exp-list">
+              <li>Developed responsive UI layouts using <strong>HTML5</strong> and <strong>CSS3</strong></li>
+              <li>Implemented mobile-friendly designs with cross-browser compatibility</li>
+              <li>Collaborated with senior developers in a structured team environment</li>
+              <li>Participated in code reviews and adopted industry-standard practices</li>
+            </ul>
           </div>
-          <p class="exp-desc">Contributed to UI development tasks, implementing pixel-perfect layouts and responsive designs as part of a collaborative development team.</p>
-          <ul class="exp-list">
-            <li>Developed responsive UI layouts using <strong>HTML5</strong> and <strong>CSS3</strong></li>
-            <li>Implemented mobile-friendly designs with cross-browser compatibility</li>
-            <li>Collaborated with senior developers in a structured team environment</li>
-            <li>Participated in code reviews and adopted industry-standard practices</li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-card reveal reveal-left">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-content">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">B.Tech Information Technology</h3>
+              <p class="edu-school">Nehru Institute of Engineering & Technology</p>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-cgpa">CGPA: 8.0 / 10</span>
+              <span class="edu-year">Graduation Year: 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certifications" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / Certifications</span>
+        <h2 class="section-title">Professional Training</h2>
+      </div>
+      <div class="cert-grid reveal-stagger">
+        <a href="assets/javacert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">☕</div>
+          <h3 class="cert-title">Java & HTML Training</h3>
+          <p class="cert-issuer">IIT Bombay (via Naan Mudhalvan)</p>
+        </a>
+        <a href="assets/Aicert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">🐍</div>
+          <h3 class="cert-title">Python, java, AI & ML</h3>
+          <p class="cert-issuer">Great Learning</p>
+        </a>
+        <a href="assets/wiprocertificate.pdf" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">📊</div>
+          <h3 class="cert-title">Data Science</h3>
+          <p class="cert-issuer">Wipro TalentNext Digital Skills Program</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section class="workshops" id="workshops">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Workshops</span>
+        <h2 class="section-title">Continuous Learning</h2>
+      </div>
+      <div class="workshop-list reveal-stagger">
+        <div class="workshop-item reveal reveal-right">
+          <div class="workshop-date">2024</div>
+          <div class="workshop-info">
+            <h3 class="workshop-title">Machine Learning Workshop</h3>
+            <p class="workshop-location">Nehru Institute of Engineering & Technology (NIET)</p>
+          </div>
+        </div>
+        <div class="workshop-item reveal reveal-right">
+          <div class="workshop-date">2024</div>
+          <div class="workshop-info">
+            <h3 class="workshop-title">Artificial Intelligence & Data Science Workshop</h3>
+            <p class="workshop-location">NIET (5-Day Intensive Program)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="creative" id="creative">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / Design & Branding</span>
+        <h2 class="section-title">Creative Studio</h2>
+      </div>
+
+      <div class="designora-brand reveal reveal-scale">
+        <div class="brand-content">
+          <div class="brand-info">
+            <h3 class="brand-name">Designora</h3>
+            <p class="brand-tagline">Where logic meets visual art</p>
+            <p class="brand-desc">Apart from development, I create posters, logos, reels, and social media visuals through my creative page <strong>Designora</strong>. I believe a strong visual sense makes me a better full-stack developer.</p>
+            <div class="brand-actions">
+              <a href="https://instagram.com/__designora__" target="_blank" class="btn btn-insta">
+                <span class="insta-icon">📸</span> Visit Designora on Instagram
+              </a>
+            </div>
+          </div>
+          <div class="brand-skills">
+            <div class="creative-tools reveal-stagger">
+              <div class="tool-badge reveal reveal-scale">
+                <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg" alt="Canva">
+                <span>Canva</span>
+              </div>
+              <div class="tool-badge reveal reveal-scale">
+                <span class="tool-emoji">🎥</span>
+                <span>CapCut</span>
+              </div>
+              <div class="tool-badge reveal reveal-scale">
+                <span class="tool-emoji">🎞️</span>
+                <span>VN Editor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="creative-showcase">
+        <div class="gallery-header reveal">
+          <h3 class="creative-sub">Visual Portfolio</h3>
+          <p class="gallery-desc">A glimpse into my graphic design and motion work.</p>
+        </div>
+        
+        <div class="design-grid reveal-stagger">
+          <!-- Poster Design -->
+          <div class="design-card reveal reveal-scale">
+            <div class="design-img-box">
+              <img src="assets/insta_poster.png" alt="Designora Poster Design">
+              <div class="design-overlay">
+                <span class="design-cat">Poster Design</span>
+                <span class="design-title">2026 Luxury Brand Concept</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Logo Design -->
+          <div class="design-card reveal reveal-scale">
+            <div class="design-img-box">
+              <img src="assets/insta_branding.png" alt="Designora Branding">
+              <div class="design-overlay">
+                <span class="design-cat">Branding</span>
+                <span class="design-title">Brew Heaven Visual Identity</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="design-card reveal reveal-scale">
+            <div class="design-img-box">
+              <img src="assets/insta_social.png" alt="Designora Social Media Content">
+              <div class="design-overlay">
+                <span class="design-cat">Social Media</span>
+                <span class="design-title">Digital Art & Creative Flow</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Motion / Reels -->
+          <div class="design-card video-card reveal reveal-scale">
+            <div class="design-img-box">
+              <video src="assets/vid1.mp4" autoplay muted loop playsinline class="design-video"></video>
+              <div class="design-overlay">
+                <span class="design-cat">Video Editing</span>
+                <span class="design-title">Reels & Motion Graphics</span>
+              </div>
+              <div class="play-icon">▶</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">08 / Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-header">
+            <div class="project-icon">🏠</div>
+            <div class="project-links">
+              <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
+              <!-- <a href="https://linkedin.com/in/anishafarveen" target="_blank" class="proj-link">LinkedIn ↗</a> -->
+            </div>
+          </div>
+          <div class="project-badge">Core Project</div>
+          <h3 class="project-title">Property Scanner</h3>
+          <p class="project-subtitle">Full Stack Mobile Application</p>
+          <p class="project-desc">A professional property management ecosystem enabling seamless registration,
+            verification, and real-time communication between owners and clients.</p>
+          <ul class="project-features">
+            <li>🔍 <strong>QR Verification:</strong> Dynamic QR code generation for secure property identification.</li>
+            <li>📸 <strong>Smart Registration:</strong> Camera-based property logging with real-time detail retrieval.
+            </li>
+            <li>💬 <strong>Live Communication:</strong> Multi-user chat using Socket.IO and Audio/Video calls via Agora
+              SDK.</li>
+            <li>🛡️ <strong>Secure Backend:</strong> Robust APIs built with PHP & MySQL for enterprise-grade data
+              handling.</li>
           </ul>
-          <div class="exp-stack">
-            <span class="tag sm">HTML5</span><span class="tag sm">CSS3</span><span class="tag sm">Responsive Design</span><span class="tag sm">Team Collaboration</span>
+          <p class="project-impact">Orchestrated a complex real-time system with concurrent multi-user support and
+            native hardware integration.</p>
+          <div class="project-video-box reveal reveal-scale">
+            <video src="assets/qrvideo.mp4" autoplay muted loop playsinline class="project-video"></video>
+            <div class="video-glow"></div>
+          </div>
+          <div class="project-stack">
+            <span class="tag sm">React Native</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora
+              SDK</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">🚗</div>
+            <div class="project-links">
+              <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
+              <!-- <a href="https://linkedin.com/in/anishafarveen" target="_blank" class="proj-link">LinkedIn ↗</a> -->
+            </div>
+          </div>
+          <h3 class="project-title">Ride Booking System</h3>
+          <p class="project-subtitle">Ola Clone · Mobile Application</p>
+          <p class="project-desc">A dual-module ride-hailing platform with dedicated interfaces for drivers and
+            passengers, featuring live GPS tracking and synchronized payment workflows.</p>
+          <ul class="project-features">
+            <li>🗺️ <strong>Live Tracking:</strong> Real-time location tracking via OpenStreetMap integration.</li>
+            <li>🔐 <strong>Secure Auth:</strong> OTP-based verification for ride confirmation.</li>
+            <li>👥 <strong>Dual Modules:</strong> Separate driver/passenger workflows with real-time ride management.
+            </li>
+          </ul>
+          <p class="project-impact">Showcases complex state management and real-time data synchronization across
+            different user types.</p>
+          <div class="project-video-box reveal reveal-scale">
+            <video src="assets/ridebookvideo.mp4" autoplay muted loop playsinline class="project-video"></video>
+            <div class="video-glow"></div>
+          </div>
+          <div class="project-stack">
+            <span class="tag sm">React Native</span><span class="tag sm">Node.js</span><span
+              class="tag sm">PHP</span><span class="tag sm">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">🌐</div>
+            <div class="project-links">
+              <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
+              <!-- <a href="https://linkedin.com/in/anishafarveen" target="_blank" class="proj-link">LinkedIn ↗</a> -->
+            </div>
+          </div>
+          <h3 class="project-title">Multi-Tenant Website Builder</h3>
+          <p class="project-subtitle">SaaS Web Platform</p>
+          <p class="project-desc">A SaaS platform that lets businesses spin up branded websites with custom themes and
+            subscription-based management.</p>
+          <ul class="project-features">
+            <li>🏢 <strong>Multi-Tenancy:</strong> Isolated user workspaces with secure data separation.</li>
+            <li>🎨 <strong>Theme Engine:</strong> Dynamic content management with CMS-style capabilities.</li>
+            <li>🔐 <strong>RBAC:</strong> Role-based access control with JWT-based authentication.</li>
+          </ul>
+          <p class="project-impact">Production-ready SaaS architecture demonstrating scalable full-stack backend design.
+          </p>
+          <div class="project-video-box reveal reveal-scale">
+            <video src="assets/multitenatvideo.mp4" autoplay muted loop playsinline class="project-video"></video>
+            <div class="video-glow"></div>
+          </div>
+          <div class="project-stack">
+            <span class="tag sm">React.js</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span><span
+              class="tag sm">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Docx Editor -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">📄</div>
+            <div class="project-links">
+              <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
+            </div>
+          </div>
+          <h3 class="project-title">Docx Editor & Document System</h3>
+          <p class="project-subtitle">Document Management Module</p>
+          <p class="project-desc">A web-based structured document creation and editing module designed for enterprise
+            workflows, featuring dynamic management and structured exports.</p>
+          <ul class="project-features">
+            <li>📝 <strong>Dynamic Editing:</strong> Built-in web-based Docx editor for structured content creation.
+            </li>
+            <li>📂 <strong>Management Workflow:</strong> Centralized system for tracking and managing document states.
+            </li>
+            <li>⚙️ <strong>Module Integration:</strong> Designed as a plug-and-play module for larger ERP/SaaS systems.
+            </li>
+          </ul>
+          <p class="project-impact">Solves business-level document automation challenges with a focus on structured data
+            and ease of use.</p>
+          <div class="project-video-box reveal reveal-scale">
+            <video src="assets/docxeditvideo.mp4" autoplay muted loop playsinline class="project-video"></video>
+            <div class="video-glow"></div>
+          </div>
+          <div class="project-stack">
+            <span class="tag sm">JavaScript</span><span class="tag sm">Web-based Editor</span><span class="tag sm">File
+              APIs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL SHOWCASE -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">09 / Gallery</span>
+        <h2 class="section-title">Visual Showcase</h2>
+      </div>
+      <div class="gallery-grid reveal-stagger">
+        <div class="gallery-item reveal reveal-scale">
+          <div class="gallery-img-box">
+            <img src="assets/driverappimg1.jpeg" alt="Ride Booking UI">
+            <div class="gallery-overlay">
+              <span>Ride Booking Map UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-scale">
+          <div class="gallery-img-box">
+            <img src="assets/videocl.jpg" alt="Video Calling UI">
+            <div class="gallery-overlay">
+              <span>Video Calling UI</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-scale">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&q=80&w=800"
+              alt="QR Scanner Flow">
+            <div class="gallery-overlay">
+              <span>QR Scanner Flow</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-scale">
+          <div class="gallery-img-box">
+            <img src="assets/driveapp3img.png" alt="Mobile Mockups">
+            <div class="gallery-overlay">
+              <span>Mobile App Mockups</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
   </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">04 / Projects</span>
-      <h2 class="section-title">What I've Built</h2>
-    </div>
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project-card featured">
-        <div class="project-header">
-          <div class="project-icon">🏠</div>
-          <div class="project-links">
-            <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
-            <!-- <a href="#" class="proj-link accent">Live Demo ↗</a> -->
-          </div>
-        </div>
-        <div class="project-badge">Featured Project</div>
-        <h3 class="project-title">Property Scanner</h3>
-        <p class="project-subtitle">Mobile Application</p>
-        <p class="project-desc">A feature-rich property management mobile app enabling users to register properties, generate QR codes for identification, and communicate with agents through real-time chat and audio/video calls — all within a single platform.</p>
-        <ul class="project-features">
-          <li>📋 Property registration with dynamic QR code generation & scanning</li>
-          <li>💬 Real-time messaging via Socket.IO with live presence indicators</li>
-          <li>📞 In-app audio & video calling powered by Agora SDK</li>
-          <li>🔗 Seamless REST API integration for data management</li>
-        </ul>
-        <p class="project-impact">Demonstrates end-to-end mobile app architecture — from real-time communication to native device features — in a production-ready codebase.</p>
-        <!-- <div class="project-stack">
-          <span class="tag sm">React Native</span><span class="tag sm">TypeScript</span><span class="tag sm">Expo</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora SDK</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span>
-        </div> -->
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-icon">🚗</div>
-          <div class="project-links">
-            <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
-            <!-- <a href="#" class="proj-link accent">Live Demo ↗</a> -->
-          </div>
-        </div>
-        <h3 class="project-title">Ride Booking System</h3>
-        <p class="project-subtitle">Ola Clone · Mobile Application</p>
-        <p class="project-desc">A dual-module ride-hailing platform with dedicated interfaces for drivers and passengers, featuring live GPS tracking, OTP-based verification, and synchronized payment workflows.</p>
-        <ul class="project-features">
-          <li>🗺️ Live location tracking via OpenStreetMap integration</li>
-          <li>🔐 OTP verification for secure ride confirmation</li>
-          <li>👥 Separate driver & passenger modules with real-time ride management</li>
-          <li>💳 Payment synchronization and trip lifecycle management</li>
-        </ul>
-        <p class="project-impact">Showcases complex state management and real-time data synchronization across two user types in a mobile environment.</p>
-        <div class="project-stack">
-          <span class="tag sm">React Native</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span><span class="tag sm">OpenStreetMap</span>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-icon">🌐</div>
-          <div class="project-links">
-            <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
-            <!-- <a href="#" class="proj-link accent">Live Demo ↗</a> -->
-          </div>
-        </div>
-        <h3 class="project-title">Multi-Tenant Website Builder</h3>
-        <p class="project-subtitle">SaaS Web Platform</p>
-        <p class="project-desc">A SaaS platform that lets businesses spin up branded websites with custom themes, dynamic content, and subscription-based access management — all from a unified admin panel.</p>
-        <ul class="project-features">
-          <li>🏢 Multi-tenant architecture with isolated user workspaces</li>
-          <li>🎨 Dynamic theme engine with CMS-style content management</li>
-          <li>🔐 JWT-based authentication with role-based access control</li>
-          <li>📅 Subscription & expiry management with activate/deactivate controls</li>
-          <li>🔀 Dynamic routing and website activation/inactivation system</li>
-        </ul>
-        <p class="project-impact">A production-grade SaaS MVP demonstrating full-stack architecture, multi-user isolation, and scalable backend design — ready for real business deployment.</p>
-        <div class="project-stack">
-          <span class="tag sm">React.js</span><span class="tag sm">PHP</span><span class="tag sm">MySQL</span><span class="tag sm">JWT</span><span class="tag sm">Tailwind CSS</span>
-        </div>
-      </div>
-
-    </div>
   </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">05 / Contact</span>
-      <h2 class="section-title">Let's Build Together</h2>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p class="contact-lead">I'm currently open to <strong>internship opportunities</strong>, <strong>freelance projects</strong>, and <strong>full-time developer roles</strong> — especially at startups and product companies building something meaningful.</p>
-        <p class="contact-sub">Whether you have a project in mind, want to discuss a role, or just want to talk tech — my inbox is always open.</p>
-        <div class="contact-links">
-          <a href="mailto:anishaad8@gmail.com" class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <div><span class="contact-label">Email</span><span class="contact-value">anishaad8@gmail.com</span></div>
-          </a>
-          <a href="https://linkedin.com/in/anishafarveen" class="contact-item" target="_blank">
-            <span class="contact-icon">💼</span>
-            <div><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/anishafarveen</span></div>
-          </a>
-          <a href="https://github.com/anishafarveen" class="contact-item" target="_blank">
-            <span class="contact-icon">🐙</span>
-            <div><span class="contact-label">GitHub</span><span class="contact-value">github.com/anishafarveen</span></div>
-          </a>
-          <div class="contact-item no-link">
-            <span class="contact-icon">📍</span>
-            <div><span class="contact-label">Location</span><span class="contact-value">Coimbatore, Tamil Nadu</span></div>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">10 / Contact</span>
+        <h2 class="section-title">Let's Build Together</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-lead">I'm currently open to <strong>internship opportunities</strong>, <strong>freelance
+              projects</strong>, and <strong>full-time developer roles</strong> — especially at startups and product
+            companies building something meaningful.</p>
+          <p class="contact-sub">Whether you have a project in mind, want to discuss a role, or just want to talk tech —
+            my inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:anishaad8@gmail.com" class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div><span class="contact-label">Email</span><span class="contact-value">anishaad8@gmail.com</span></div>
+            </a>
+            <a href="https://linkedin.com/in/anishafarveen" class="contact-item" target="_blank">
+              <span class="contact-icon">💼</span>
+              <div><span class="contact-label">LinkedIn</span><span
+                  class="contact-value">linkedin.com/in/anishafarveen</span></div>
+            </a>
+            <a href="https://github.com/anishafarveen" class="contact-item" target="_blank">
+              <span class="contact-icon">🐙</span>
+              <div><span class="contact-label">GitHub</span><span class="contact-value">github.com/anishafarveen</span>
+              </div>
+            </a>
+            <div class="contact-item no-link">
+              <span class="contact-icon">📍</span>
+              <div><span class="contact-label">Location</span><span class="contact-value">Coimbatore, Tamil Nadu</span>
+              </div>
+            </div>
           </div>
         </div>
+        <form id="contactForm" action="https://formsubmit.co/anishaad8@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Discussion / Internship Offer" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."
+              required></textarea>
+          </div>
+          <input type="hidden" name="_captcha" value="false">
+          <button type="submit" class="btn btn-primary full-width" id="submitBtn">Send Message →</button>
+          <p class="form-note">I typically respond within 24 hours.</p>
+        </form>
       </div>
-      <form id="contactForm"
-action="https://formsubmit.co/anishaad8@gmail.com"
-method="POST">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Project Discussion / Internship Offer" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-        </div>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit" class="btn btn-primary full-width" id="submitBtn">Send Message →</button>
-        <p class="form-note">I typically respond within 24 hours.</p>
-      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <a href="#home" class="nav-logo footer-logo"><span class="logo-bracket">&lt;</span>Anisha<span class="logo-dot">/</span><span class="logo-bracket">&gt;</span></a>
-      <p class="footer-tagline">Building the future, one commit at a time.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="nav-logo footer-logo"><span class="logo-bracket">&lt;</span>Anisha<span
+            class="logo-dot">/</span><span class="logo-bracket">&gt;</span></a>
+        <p class="footer-tagline">Building the future, one commit at a time.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Anisha Farveen. All rights reserved.</p>
+        <p class="footer-made">Designed & built with ♥ in Coimbatore</p>
+      </div>
     </div>
-    <div class="footer-nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2026 Anisha Farveen. All rights reserved.</p>
-      <p class="footer-made">Designed & built with ♥ in Coimbatore</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<div class="back-to-top" id="backToTop" title="Back to top">↑</div>
+  <div class="back-to-top" id="backToTop" title="Back to top">↑</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -25,23 +25,45 @@ const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+  });
 });
+
+// ===== REVEAL ON SCROLL =====
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      
+      // Trigger running numbers if it's an impact item
+      const num = entry.target.querySelector('.impact-num');
+      if (num && !num.classList.contains('animated')) {
+        const target = parseInt(num.getAttribute('data-target'));
+        animateValue(num, 0, target, 2000);
+        num.classList.add('animated');
+      }
+    }
+  });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => revealObserver.observe(el));
 
 // ===== RUNNING NUMBERS =====
 function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
-  const isPlus = end.toString().includes('+');
-  const endVal = parseInt(end.toString().replace('+', ''));
-  
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    const currentVal = Math.floor(progress * (endVal - start) + start);
-    obj.innerHTML = currentVal + (isPlus ? '+' : '');
+    const currentVal = Math.floor(progress * (end - start) + start);
+    obj.innerHTML = currentVal;
     if (progress < 1) {
       window.requestAnimationFrame(step);
     }
@@ -49,11 +71,23 @@ function animateValue(obj, start, end, duration) {
   window.requestAnimationFrame(step);
 }
 
+// Initialize Hero stats on load
 window.addEventListener('load', () => {
-  const stats = document.querySelectorAll('.stat-num');
-  stats.forEach(stat => {
-    const target = stat.textContent.trim();
-    animateValue(stat, 0, target, 2000);
+  const heroStats = document.querySelectorAll('.stat-num');
+  heroStats.forEach(stat => {
+    const targetStr = stat.textContent.trim();
+    const isPlus = targetStr.includes('+');
+    const target = parseInt(targetStr.replace('+', ''));
+    
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / 2000, 1);
+      const currentVal = Math.floor(progress * target);
+      stat.innerHTML = currentVal + (isPlus ? '+' : '');
+      if (progress < 1) window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
   });
 });
 
@@ -122,6 +156,7 @@ let charIndex = 0;
 let isDeleting = false;
 
 function typeRole() {
+  if (!heroRole) return;
   const current = roles[roleIndex];
   if (isDeleting) {
     heroRole.textContent = current.substring(0, charIndex - 1);
@@ -144,3 +179,38 @@ function typeRole() {
 }
 
 setTimeout(typeRole, 1000);
+
+// ===== TOUCH & HOVER ACTIVE STATES (All Devices) =====
+// Fires on cursor hover AND tap for universal interaction support
+function addTouchEffect(selector) {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(el => {
+    // Mouse hover (desktop & DevTools)
+    el.addEventListener('mouseenter', () => {
+      el.classList.add('touch-active');
+    });
+    el.addEventListener('mouseleave', () => {
+      el.classList.remove('touch-active');
+    });
+
+    // Touch (mobile & tablet)
+    el.addEventListener('touchstart', () => {
+      el.classList.add('touch-active');
+    }, { passive: true });
+    el.addEventListener('touchend', () => {
+      setTimeout(() => el.classList.remove('touch-active'), 400);
+    }, { passive: true });
+    el.addEventListener('touchcancel', () => {
+      el.classList.remove('touch-active');
+    }, { passive: true });
+  });
+}
+
+addTouchEffect('.profile-frame');
+addTouchEffect('.about-card');
+addTouchEffect('.project-card');
+addTouchEffect('.cert-card');
+addTouchEffect('.workshop-item');
+addTouchEffect('.exp-card');
+addTouchEffect('.gallery-item');
+addTouchEffect('.design-card');
