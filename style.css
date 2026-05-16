@@ -1453,8 +1453,8 @@ code { font-family: var(--mono); font-size: 0.9rem; line-height: 2; color: #333;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    padding: 80px 24px 40px;
-    gap: 28px;
+    padding: 70px 24px 30px;
+    gap: 18px;
     z-index: 9998;
     align-items: center;
     justify-content: center;
@@ -1481,6 +1481,18 @@ code { font-family: var(--mono); font-size: 0.9rem; line-height: 2; color: #333;
   .exp-meta { align-items: flex-start; }
   section { padding: 72px 0; }
 }
+
+/* ===== TABLET HAMBURGER MENU (481px - 900px) ===== */
+@media (min-width: 481px) and (max-width: 900px) {
+  .nav-links.open a {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .nav-links.open {
+    gap: 24px;
+  }
+}
+
 /* =========================
    EXTRA MOBILE FIXES
 ========================= */
