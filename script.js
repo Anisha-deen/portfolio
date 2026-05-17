@@ -214,3 +214,268 @@ addTouchEffect('.workshop-item');
 addTouchEffect('.exp-card');
 addTouchEffect('.gallery-item');
 addTouchEffect('.design-card');
+
+// =============================================
+// LIGHTBOX — Gallery & Creative section
+// Click image → open full-screen image viewer
+// Click video → open full-screen with sound + controls
+// Close → ✕ button | backdrop click | Escape key
+// =============================================
+(function () {
+  const lightbox       = document.getElementById('lightbox');
+  const backdrop       = document.getElementById('lightboxBackdrop');
+  const closeBtn       = document.getElementById('lightboxClose');
+  const caption        = document.getElementById('lightboxCaption');
+  const imgWrap        = document.getElementById('lightboxImgWrap');
+  const lightboxImg    = document.getElementById('lightboxImg');
+  const videoWrap      = document.getElementById('lightboxVideoWrap');
+  const lightboxVideo  = document.getElementById('lightboxVideo');
+
+  if (!lightbox) return; // safety guard
+
+  // ── Open helpers ─────────────────────────────────────────────────────────
+
+  function openImage(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    caption.textContent = alt || '';
+    imgWrap.style.display   = 'flex';
+    videoWrap.style.display = 'none';
+    // Reset any leftover video
+    lightboxVideo.pause();
+    lightboxVideo.src = '';
+    showLightbox();
+  }
+
+  function openVideo(src, label) {
+    lightboxVideo.src = src;
+    lightboxVideo.muted = false;    // sound ON in lightbox
+    caption.textContent = label || '';
+    imgWrap.style.display   = 'none';
+    videoWrap.style.display = 'flex';
+    showLightbox();
+    // Small delay so the DOM is visible before play()
+    setTimeout(() => lightboxVideo.play().catch(() => {}), 80);
+  }
+
+  function showLightbox() {
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+    // Animate in
+    requestAnimationFrame(() => lightbox.classList.add('lb-open'));
+  }
+
+  // ── Close helper ─────────────────────────────────────────────────────────
+
+  function closeLightbox() {
+    lightbox.classList.remove('lb-open');
+    // Wait for CSS transition to finish, then hide
+    lightbox.addEventListener('transitionend', function handler() {
+      lightbox.hidden = true;
+      lightbox.removeEventListener('transitionend', handler);
+    });
+    // Stop video & release src so browser stops buffering
+    lightboxVideo.pause();
+    lightboxVideo.src = '';
+    lightboxImg.src   = '';
+    document.body.style.overflow = '';
+  }
+
+  // ── Close triggers ───────────────────────────────────────────────────────
+
+  closeBtn.addEventListener('click', closeLightbox);
+  backdrop.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+
+  // ── Attach to Gallery section items ──────────────────────────────────────
+  // Selector: every .gallery-img-box that contains an <img>
+
+  document.querySelectorAll('.gallery-item .gallery-img-box').forEach(box => {
+    const img = box.querySelector('img');
+    if (!img) return;
+
+    box.style.cursor = 'zoom-in';
+    box.addEventListener('click', () => {
+      // Use dataset label from the overlay span, else fall back to alt
+      const label = box.querySelector('.gallery-overlay span')?.textContent
+                    || img.alt || '';
+      openImage(img.src, label);
+    });
+  });
+
+  // ── Attach to Creative / Design-grid items ───────────────────────────────
+  // Images → image mode, Videos → video mode
+
+  document.querySelectorAll('.design-card .design-img-box').forEach(box => {
+    const img   = box.querySelector('img');
+    const video = box.querySelector('video');
+
+    // Label from the overlay title span
+    const label = box.querySelector('.design-title')?.textContent
+                  || box.querySelector('.design-cat')?.textContent
+                  || '';
+
+    if (video) {
+      // Card has a video — open in video lightbox
+      box.style.cursor = 'pointer';
+      box.addEventListener('click', () => openVideo(video.src || video.currentSrc, label));
+    } else if (img) {
+      // Card has only an image
+      box.style.cursor = 'zoom-in';
+      box.addEventListener('click', () => openImage(img.src, label));
+    }
+  });
+
+  // ── Attach to Projects section video boxes ───────────────────────────────
+  // Each .project-video-box contains a looping muted preview video.
+  // Clicking it opens the same video in the lightbox WITH sound + controls.
+
+  document.querySelectorAll('.project-video-box').forEach(box => {
+    const video = box.querySelector('.project-video');
+    if (!video) return;
+
+    // Grab the project title from the nearest parent card
+    const card  = box.closest('.project-card');
+    const label = card?.querySelector('.project-title')?.textContent?.trim() || '';
+
+    box.style.cursor = 'pointer';
+
+    box.addEventListener('click', () => {
+      openVideo(video.src || video.currentSrc, label);
+    });
+  });
+
+})();
+
+
+// CONTACT FORM — Web3Forms Integration
+// Handles submission via fetch() so the page
+// never reloads. Shows loading / success / error
+// states inline, then clears the form on success.
+// =============================================
+(function () {
+  const form        = document.getElementById('contactForm');
+  const submitBtn   = document.getElementById('submitBtn');
+  const successBox  = document.getElementById('formSuccess');
+  const errorBox    = document.getElementById('formError');
+
+  // Guard: do nothing if the contact section isn't on this page
+  if (!form) return;
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+
+  /** Show the submit button in its loading state */
+  function setLoading(state) {
+    form.classList.toggle('loading', state);
+    submitBtn.disabled = state;
+  }
+
+  /** Show the success banner and hide the error banner */
+  function showSuccess() {
+    successBox.hidden = false;
+    errorBox.hidden   = true;
+    // Auto-hide the success message after 8 seconds
+    setTimeout(() => { successBox.hidden = true; }, 8000);
+  }
+
+  /** Show the error banner and hide the success banner */
+  function showError() {
+    errorBox.hidden   = false;
+    successBox.hidden = true;
+  }
+
+  /** Hide both feedback banners */
+  function hideFeedback() {
+    successBox.hidden = true;
+    errorBox.hidden   = true;
+  }
+
+  // ── Manual HTML5-style validation ────────────────────────────────────────
+  // novalidate is set on the form so we control the UX ourselves.
+
+  function validateForm() {
+    const name    = form.querySelector('#name');
+    const email   = form.querySelector('#email');
+    const message = form.querySelector('#message');
+
+    // Trim whitespace before checking
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      name.focus();
+      name.setCustomValidity('Please enter your name (at least 2 characters).');
+      name.reportValidity();
+      name.setCustomValidity('');   // reset so next submit re-evaluates
+      return false;
+    }
+
+    // Basic email pattern check
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim() || !emailRe.test(email.value.trim())) {
+      email.focus();
+      email.setCustomValidity('Please enter a valid email address.');
+      email.reportValidity();
+      email.setCustomValidity('');
+      return false;
+    }
+
+    if (!message.value.trim() || message.value.trim().length < 10) {
+      message.focus();
+      message.setCustomValidity('Please enter a message (at least 10 characters).');
+      message.reportValidity();
+      message.setCustomValidity('');
+      return false;
+    }
+
+    return true;
+  }
+
+  // ── Form submit handler ───────────────────────────────────────────────────
+
+  form.addEventListener('submit', async (e) => {
+    // Always prevent the default browser redirect/reload
+    e.preventDefault();
+
+    hideFeedback();
+
+    // Client-side validation before hitting the API
+    if (!validateForm()) return;
+
+    setLoading(true);
+
+    try {
+      // Build the payload from form fields
+      const formData = new FormData(form);
+      const payload  = Object.fromEntries(formData.entries());
+
+      // POST to Web3Forms API as JSON
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method:  'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept':        'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        // ✅ Submission accepted by Web3Forms
+        showSuccess();
+        form.reset();   // clear all fields
+      } else {
+        // API returned a non-2xx status or success:false
+        console.error('Web3Forms error:', result);
+        showError();
+      }
+    } catch (networkError) {
+      // Network failure (offline, DNS error, etc.)
+      console.error('Network error:', networkError);
+      showError();
+    } finally {
+      // Always re-enable the button regardless of outcome
+      setLoading(false);
+    }
+  });
+})();

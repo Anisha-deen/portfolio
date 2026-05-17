@@ -496,7 +496,7 @@
           <!-- Poster Design -->
           <div class="design-card reveal reveal-scale">
             <div class="design-img-box">
-              <img src="assets/insta_poster.png" alt="Designora Poster Design">
+              <img src="assets/post1.png" alt="Designora Poster Design">
               <div class="design-overlay">
                 <span class="design-cat">Poster Design</span>
                 <span class="design-title">2026 Luxury Brand Concept</span>
@@ -507,7 +507,7 @@
           <!-- Logo Design -->
           <div class="design-card reveal reveal-scale">
             <div class="design-img-box">
-              <img src="assets/insta_branding.png" alt="Designora Branding">
+              <img src="assets/post2.png" alt="Designora Branding">
               <div class="design-overlay">
                 <span class="design-cat">Branding</span>
                 <span class="design-title">Brew Heaven Visual Identity</span>
@@ -518,7 +518,7 @@
           <!-- Social Media -->
           <div class="design-card reveal reveal-scale">
             <div class="design-img-box">
-              <img src="assets/insta_social.png" alt="Designora Social Media Content">
+              <img src="assets/post3.png" alt="Designora Social Media Content">
               <div class="design-overlay">
                 <span class="design-cat">Social Media</span>
                 <span class="design-title">Digital Art & Creative Flow</span>
@@ -594,6 +594,7 @@
               <!-- <a href="https://linkedin.com/in/anishafarveen" target="_blank" class="proj-link">LinkedIn ↗</a> -->
             </div>
           </div>
+           <div class="project-badge">Core Project</div>
           <h3 class="project-title">Ride Booking System</h3>
           <p class="project-subtitle">Ola Clone · Mobile Application</p>
           <p class="project-desc">A dual-module ride-hailing platform with dedicated interfaces for drivers and
@@ -604,8 +605,10 @@
             <li>👥 <strong>Dual Modules:</strong> Separate driver/passenger workflows with real-time ride management.
             </li>
           </ul>
+          
           <p class="project-impact">Showcases complex state management and real-time data synchronization across
             different user types.</p>
+            <br>
           <div class="project-video-box reveal reveal-scale">
             <video src="assets/ridebookvideo.mp4" autoplay muted loop playsinline class="project-video"></video>
             <div class="video-glow"></div>
@@ -625,6 +628,7 @@
               <!-- <a href="https://linkedin.com/in/anishafarveen" target="_blank" class="proj-link">LinkedIn ↗</a> -->
             </div>
           </div>
+           <div class="project-badge">Core Project</div>
           <h3 class="project-title">Multi-Tenant Website Builder</h3>
           <p class="project-subtitle">SaaS Web Platform</p>
           <p class="project-desc">A SaaS platform that lets businesses spin up branded websites with custom themes and
@@ -654,6 +658,7 @@
               <a href="https://github.com/Anisha-deen" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
           </div>
+           <div class="project-badge">Core Project</div>
           <h3 class="project-title">Docx Editor & Document System</h3>
           <p class="project-subtitle">Document Management Module</p>
           <p class="project-desc">A web-based structured document creation and editing module designed for enterprise
@@ -767,26 +772,69 @@
             </div>
           </div>
         </div>
-        <form id="contactForm" action="https://formsubmit.co/anishaad8@gmail.com" method="POST">
+        <!-- =============================================
+             CONTACT FORM — Powered by Web3Forms
+             Replace YOUR_ACCESS_KEY with the key from
+             https://web3forms.com (free, no server needed)
+             ============================================= -->
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+          <!-- Web3Forms: required access key (get yours free at web3forms.com) -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+          <!-- Honeypot spam filter — hidden from real users -->
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
+          <!-- Form subject shown in the email inbox -->
+          <input type="hidden" name="subject" value="New Portfolio Contact from Web3Forms" />
+
+          <!-- ── Name field ── -->
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            <input type="text" id="name" name="name" placeholder="Jane Smith"
+                   required minlength="2" maxlength="100" autocomplete="name" />
           </div>
+
+          <!-- ── Email field ── -->
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            <input type="email" id="email" name="email" placeholder="jane@company.com"
+                   required autocomplete="email" />
           </div>
+
+          <!-- ── Subject field ── -->
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project Discussion / Internship Offer" />
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="form_subject"
+                   placeholder="Project Discussion / Internship Offer"
+                   maxlength="150" />
           </div>
+
+          <!-- ── Message field ── -->
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."
-              required></textarea>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="Tell me about your project or opportunity..."
+                      required minlength="10" maxlength="2000"></textarea>
           </div>
-          <input type="hidden" name="_captcha" value="false">
-          <button type="submit" class="btn btn-primary full-width" id="submitBtn">Send Message →</button>
+
+          <!-- Submit button — JS adds .loading class while waiting for response -->
+          <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+            <span class="btn-text">Send Message →</span>
+            <span class="btn-loader" aria-hidden="true">Sending…</span>
+          </button>
+
+          <!-- Success message — shown after a confirmed submission -->
+          <div id="formSuccess" class="form-feedback form-success" role="alert" aria-live="polite" hidden>
+            ✅ Message sent! I'll get back to you within 24 hours.
+          </div>
+
+          <!-- Error message — shown on network / API failure -->
+          <div id="formError" class="form-feedback form-error" role="alert" aria-live="polite" hidden>
+            ❌ Something went wrong. Please try again or email me directly at
+            <a href="mailto:anishaad8@gmail.com">anishaad8@gmail.com</a>.
+          </div>
+
           <p class="form-note">I typically respond within 24 hours.</p>
         </form>
       </div>
@@ -816,6 +864,35 @@
   </footer>
 
   <div class="back-to-top" id="backToTop" title="Back to top">↑</div>
+
+  <!-- =============================================
+       LIGHTBOX MODAL
+       Opens when user clicks any gallery image or video.
+       Images  → shows <img> full-screen.
+       Videos  → shows <video> with controls + sound.
+       Close   → click backdrop, ✕ button, or Escape key.
+       ============================================= -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+
+    <div class="lightbox-box">
+      <!-- Close button -->
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close viewer">✕</button>
+
+      <!-- Caption (title of the item) -->
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+
+      <!-- Image view -->
+      <div class="lightbox-img-wrap" id="lightboxImgWrap">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+
+      <!-- Video view (sound ON, controls visible) -->
+      <div class="lightbox-video-wrap" id="lightboxVideoWrap">
+        <video id="lightboxVideo" controls playsinline></video>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
