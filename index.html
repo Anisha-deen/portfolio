@@ -29,11 +29,12 @@
           class="logo-bracket">&gt;</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#gallery">UI/UX Design</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#creative-portfolio">Creative Work</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="mobile-only"><a href="#contact" class="nav-cta-mobile">Hire me</a></li>
       </ul>
@@ -53,26 +54,37 @@
     </div>
     <div class="hero-container hero-flex">
       <div class="hero-content">
-        <div class="hero-status-pill">AVAILABLE FOR WORK</div>
+        <div class="hero-status-pill">⚡ AVAILABLE FOR WORK</div>
         <h1 class="hero-main-title">Hi, I'm <span class="accent-text">Anisha</span></h1>
-        <p class="hero-description">I am a <span class="hero-role"></span>. I build high-impact mobile
-          experiences and scalable full-stack systems that users love.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View my work <span class="arrow-down">↓</span></a>
-          <a href="resume.pdf" class="btn btn-outline" download>Resume <span class="download-icon">📥</span></a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects Shipped</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Technologies</span></div>
+        
+        <p class="hero-description">I am a <span class="hero-role accent-text" style="font-weight: 700;"></span>. I build high-impact mobile
+          experiences, creative designs, and engaging video content that users love.</p>
+        
+        <div class="hero-actions" style="gap: 12px; justify-content: flex-start;">
+          <a href="#projects" class="btn btn-primary">View Projects <span class="arrow-down">↓</span></a>
+          <a href="#creative-portfolio" class="btn btn-creative">View Designs <span class="sparkle-icon">✨</span></a>
+          <a href="resume.pdf" class="btn btn-outline" download title="Download Resume">Resume 📥</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="profile-frame">
-          <img src="assets/portfolio.png" alt="Anisha Farveen" class="profile-img" />
+        <div class="profile-frame-wrapper">
+          <div class="profile-frame">
+            <img src="assets/portfolio.png" alt="Anisha Farveen" class="profile-img" />
+          </div>
+          <!-- Floating Tech & Design Icons -->
+          <!-- <div class="floating-icon icon-react" title="React Native & Frontend">
+            <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" />
+          </div> -->
+          <!-- <div class="floating-icon icon-figma" title="Figma Design">
+            <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />
+          </div> -->
+          <!-- <div class="floating-icon icon-canva" title="Canva Creative">
+            <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg" alt="Canva" />
+          </div> -->
+          <!-- <div class="floating-icon icon-capcut" title="CapCut Video Editor">
+            <img src="https://www.svgrepo.com/show/443015/capcut.svg" alt="CapCut" />
+          </div> -->
         </div>
       </div>
     </div>
@@ -81,7 +93,8 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  
+<!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
       <div class="section-header">
@@ -118,6 +131,7 @@
           <p class="about-text">I'm a proactive learner who keeps up with modern development practices. I bring both
             <strong>technical depth</strong> and a <strong>product mindset</strong> — I don't just write code, I think
             about user experience, system design, and long-term maintainability.</p>
+          <p class="about-text">Apart from development, I’m also passionate about <strong class="accent-text">creative design</strong> and <strong class="accent-text">video editing</strong>. I’ve worked on branding, poster design, and promotional video editing projects for brands and social media pages using tools like <strong>Canva</strong>, <strong>Figma</strong>, and <strong>CapCut</strong>.</p>
           <div class="about-highlights">
             <div class="highlight-item"><span class="hi-icon">⚡</span><span>Real-time systems with Socket.IO &
                 WebRTC</span></div>
@@ -137,7 +151,8 @@
     </div>
   </section>
 
-  <!-- IMPACT / ACHIEVEMENTS -->
+  
+<!-- IMPACT / ACHIEVEMENTS -->
   <section class="impact" id="impact">
     <div class="container">
       <div class="impact-grid">
@@ -165,15 +180,22 @@
           </div>
           <p class="impact-label">Core Technologies Mastered</p>
         </div>
+        <div class="impact-item reveal">
+          <div class="impact-stat">
+            <span class="impact-num" data-target="10">0</span><span class="impact-plus">+</span>
+          </div>
+          <p class="impact-label">Projects Shipped</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  
+<!-- SKILLS -->
   <section class="skills" id="skills">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">02 / Skills</span>
+        <span class="section-tag">02 / Tech Stack</span>
         <h2 class="section-title">Tech Stack</h2>
       </div>
       <div class="skills-wrapper">
@@ -296,257 +318,16 @@
           </div>
         </div>
       </div>
+
+      
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="experience" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">03 / Experience</span>
-        <h2 class="section-title">Where I've Worked</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item active">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-            <div class="marker-line"></div>
-          </div>
-          <div class="exp-card">
-            <div class="exp-header">
-              <div>
-                <h3 class="exp-title">Web Developer Intern</h3>
-                <p class="exp-company">El Codamics</p>
-              </div>
-              <!-- <div class="exp-meta">
-              <span class="exp-badge current">Current</span>
-              <span class="exp-date">Jan 2026 – Present</span>
-            </div> -->
-            </div>
-            <p class="exp-desc">Working on production-grade real-time web and mobile applications, contributing across
-              the full stack — from UI design to backend API integration and live communication features.</p>
-            <ul class="exp-list">
-              <li>Developing cross-platform mobile applications using <strong>React Native</strong> and
-                <strong>TypeScript</strong> with Expo</li>
-              <li>Building real-time chat and presence features using <strong>Socket.IO</strong></li>
-              <li>Integrating <strong>Agora SDK</strong> for in-app audio and video calling functionality</li>
-              <li>Developing RESTful backend APIs with <strong>Node.js</strong>, <strong>PHP</strong>, and
-                <strong>MySQL</strong></li>
-              <li>Crafting responsive, accessible UIs with <strong>React.js</strong> and <strong>Tailwind CSS</strong>
-              </li>
-            </ul>
-            <div class="exp-stack">
-              <span class="tag sm">React Native</span><span class="tag sm">React.js</span><span
-                class="tag sm">TypeScript</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora
-                SDK</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span
-                class="tag sm">MySQL</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="marker-dot"></div>
-          </div>
-          <div class="exp-card">
-            <div class="exp-header">
-              <div>
-                <h3 class="exp-title">Web Developer Intern</h3>
-                <p class="exp-company">Accent Techno Soft</p>
-              </div>
-              <!-- <div class="exp-meta">
-              <span class="exp-date">Jan 2025 – Feb 2025</span>
-            </div> -->
-            </div>
-            <p class="exp-desc">Contributed to UI development tasks, implementing pixel-perfect layouts and responsive
-              designs as part of a collaborative development team.</p>
-            <ul class="exp-list">
-              <li>Developed responsive UI layouts using <strong>HTML5</strong> and <strong>CSS3</strong></li>
-              <li>Implemented mobile-friendly designs with cross-browser compatibility</li>
-              <li>Collaborated with senior developers in a structured team environment</li>
-              <li>Participated in code reviews and adopted industry-standard practices</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="education" id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">04 / Education</span>
-        <h2 class="section-title">Academic Background</h2>
-      </div>
-      <div class="edu-card reveal reveal-left">
-        <div class="edu-icon">🎓</div>
-        <div class="edu-content">
-          <div class="edu-header">
-            <div>
-              <h3 class="edu-degree">B.Tech Information Technology</h3>
-              <p class="edu-school">Nehru Institute of Engineering & Technology</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-cgpa">CGPA: 8.0 / 10</span>
-              <span class="edu-year">Graduation Year: 2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="certifications" id="certifications">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">05 / Certifications</span>
-        <h2 class="section-title">Professional Training</h2>
-      </div>
-      <div class="cert-grid reveal-stagger">
-        <a href="assets/javacert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
-          <div class="cert-logo">☕</div>
-          <h3 class="cert-title">Java & HTML Training</h3>
-          <p class="cert-issuer">IIT Bombay (via Naan Mudhalvan)</p>
-        </a>
-        <a href="assets/Aicert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
-          <div class="cert-logo">🐍</div>
-          <h3 class="cert-title">Python, java, AI & ML</h3>
-          <p class="cert-issuer">Great Learning</p>
-        </a>
-        <a href="assets/wiprocertificate.pdf" target="_blank" class="cert-card reveal reveal-scale">
-          <div class="cert-logo">📊</div>
-          <h3 class="cert-title">Data Science</h3>
-          <p class="cert-issuer">Wipro TalentNext Digital Skills Program</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKSHOPS -->
-  <section class="workshops" id="workshops">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">06 / Workshops</span>
-        <h2 class="section-title">Continuous Learning</h2>
-      </div>
-      <div class="workshop-list reveal-stagger">
-        <div class="workshop-item reveal reveal-right">
-          <div class="workshop-date">2024</div>
-          <div class="workshop-info">
-            <h3 class="workshop-title">Machine Learning Workshop</h3>
-            <p class="workshop-location">Nehru Institute of Engineering & Technology (NIET)</p>
-          </div>
-        </div>
-        <div class="workshop-item reveal reveal-right">
-          <div class="workshop-date">2024</div>
-          <div class="workshop-info">
-            <h3 class="workshop-title">Artificial Intelligence & Data Science Workshop</h3>
-            <p class="workshop-location">NIET (5-Day Intensive Program)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="creative" id="creative">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">07 / Design & Branding</span>
-        <h2 class="section-title">Creative Studio</h2>
-      </div>
-
-      <div class="designora-brand reveal reveal-scale">
-        <div class="brand-content">
-          <div class="brand-info">
-            <h3 class="brand-name">Designora</h3>
-            <p class="brand-tagline">Where logic meets visual art</p>
-            <p class="brand-desc">Apart from development, I create posters, logos, reels, and social media visuals through my creative page <strong>Designora</strong>. I believe a strong visual sense makes me a better full-stack developer.</p>
-            <div class="brand-actions">
-              <a href="https://instagram.com/__designora__" target="_blank" class="btn btn-insta">
-                <span class="insta-icon">📸</span> Visit Designora on Instagram
-              </a>
-            </div>
-          </div>
-          <div class="brand-skills">
-            <div class="creative-tools reveal-stagger">
-              <div class="tool-badge reveal reveal-scale">
-                <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg" alt="Canva">
-                <span>Canva</span>
-              </div>
-              <div class="tool-badge reveal reveal-scale">
-                <span class="tool-emoji">🎥</span>
-                <span>CapCut</span>
-              </div>
-              <div class="tool-badge reveal reveal-scale">
-                <span class="tool-emoji">🎞️</span>
-                <span>VN Editor</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="creative-showcase">
-        <div class="gallery-header reveal">
-          <h3 class="creative-sub">Visual Portfolio</h3>
-          <p class="gallery-desc">A glimpse into my graphic design and motion work.</p>
-        </div>
-        
-        <div class="design-grid reveal-stagger">
-          <!-- Poster Design -->
-          <div class="design-card reveal reveal-scale">
-            <div class="design-img-box">
-              <img src="assets/post1.png" alt="Designora Poster Design">
-              <div class="design-overlay">
-                <span class="design-cat">Poster Design</span>
-                <span class="design-title">2026 Luxury Brand Concept</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Logo Design -->
-          <div class="design-card reveal reveal-scale">
-            <div class="design-img-box">
-              <img src="assets/post2.png" alt="Designora Branding">
-              <div class="design-overlay">
-                <span class="design-cat">Branding</span>
-                <span class="design-title">Brew Heaven Visual Identity</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Social Media -->
-          <div class="design-card reveal reveal-scale">
-            <div class="design-img-box">
-              <img src="assets/post3.png" alt="Designora Social Media Content">
-              <div class="design-overlay">
-                <span class="design-cat">Social Media</span>
-                <span class="design-title">Digital Art & Creative Flow</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Motion / Reels -->
-          <div class="design-card video-card reveal reveal-scale">
-            <div class="design-img-box">
-              <video src="assets/vid1.mp4" autoplay muted loop playsinline class="design-video"></video>
-              <div class="design-overlay">
-                <span class="design-cat">Video Editing</span>
-                <span class="design-title">Reels & Motion Graphics</span>
-              </div>
-              <div class="play-icon">▶</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
+<!-- PROJECTS -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">08 / Projects</span>
+        <span class="section-tag">03 / Projects</span>
         <h2 class="section-title">What I've Built</h2>
       </div>
       <div class="projects-grid">
@@ -687,12 +468,13 @@
     </div>
   </section>
 
-  <!-- VISUAL SHOWCASE -->
+  
+<!-- VISUAL SHOWCASE -->
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">09 / Gallery</span>
-        <h2 class="section-title">Visual Showcase</h2>
+        <span class="section-tag">04 / UI/UX Design</span>
+        <h2 class="section-title">UI/UX Design Mockups</h2>
       </div>
       <div class="gallery-grid reveal-stagger">
         <div class="gallery-item reveal reveal-scale">
@@ -732,15 +514,576 @@
     </div>
   </section>
 
-  </div>
-  </div>
+
+
+  
+<!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item active">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Web Developer Intern</h3>
+                <p class="exp-company">El Codamics</p>
+              </div>
+              <!-- <div class="exp-meta">
+              <span class="exp-badge current">Current</span>
+              <span class="exp-date">Jan 2026 – Present</span>
+            </div> -->
+            </div>
+            <p class="exp-desc">Working on production-grade real-time web and mobile applications, contributing across
+              the full stack — from UI design to backend API integration and live communication features.</p>
+            <ul class="exp-list">
+              <li>Developing cross-platform mobile applications using <strong>React Native</strong> and
+                <strong>TypeScript</strong> with Expo</li>
+              <li>Building real-time chat and presence features using <strong>Socket.IO</strong></li>
+              <li>Integrating <strong>Agora SDK</strong> for in-app audio and video calling functionality</li>
+              <li>Developing RESTful backend APIs with <strong>Node.js</strong>, <strong>PHP</strong>, and
+                <strong>MySQL</strong></li>
+              <li>Crafting responsive, accessible UIs with <strong>React.js</strong> and <strong>Tailwind CSS</strong>
+              </li>
+              <li>Designed social media posters using <strong>Canva</strong> and <strong>Figma</strong></li>
+              <li>Edited promotional reels using <strong>CapCut</strong></li>
+              <li>Created digital marketing creatives</li>
+            </ul>
+            <div class="exp-stack">
+              <span class="tag sm">React Native</span><span class="tag sm">React.js</span><span
+                class="tag sm">TypeScript</span><span class="tag sm">Socket.IO</span><span class="tag sm">Agora
+                SDK</span><span class="tag sm">Node.js</span><span class="tag sm">PHP</span><span
+                class="tag sm">MySQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-title">Web Developer Intern</h3>
+                <p class="exp-company">Accent Techno Soft</p>
+              </div>
+              <!-- <div class="exp-meta">
+              <span class="exp-date">Jan 2025 – Feb 2025</span>
+            </div> -->
+            </div>
+            <p class="exp-desc">Contributed to UI development tasks, implementing pixel-perfect layouts and responsive
+              designs as part of a collaborative development team.</p>
+            <ul class="exp-list">
+              <li>Developed responsive UI layouts using <strong>HTML5</strong> and <strong>CSS3</strong></li>
+              <li>Implemented mobile-friendly designs with cross-browser compatibility</li>
+              <li>Collaborated with senior developers in a structured team environment</li>
+              <li>Participated in code reviews and adopted industry-standard practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT -->
+  
+<!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-icon-wrapper">
+          <span class="edu-icon">🎓</span>
+        </div>
+        <div class="edu-content">
+          <h3 class="edu-degree">B.Tech Information Technology</h3>
+          <p class="edu-school">Nehru Institute of Engineering & Technology</p>
+        </div>
+        <div class="edu-meta">
+          <span class="edu-cgpa">CGPA: 8.0 / 10</span>
+          <span class="edu-year">Graduation Year: 2026</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  
+<!-- CERTIFICATIONS -->
+  <section class="certifications" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / Certifications</span>
+        <h2 class="section-title">Professional Training</h2>
+      </div>
+      <div class="cert-grid reveal-stagger">
+        <a href="assets/javacert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">☕</div>
+          <h3 class="cert-title">Java & HTML Training</h3>
+          <p class="cert-issuer">IIT Bombay (via Naan Mudhalvan)</p>
+        </a>
+        <a href="assets/Aicert.jpeg" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">🐍</div>
+          <h3 class="cert-title">Python, java, AI & ML</h3>
+          <p class="cert-issuer">Great Learning</p>
+        </a>
+        <a href="assets/wiprocertificate.pdf" target="_blank" class="cert-card reveal reveal-scale">
+          <div class="cert-logo">📊</div>
+          <h3 class="cert-title">Data Science</h3>
+          <p class="cert-issuer">Wipro TalentNext Digital Skills Program</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- WORKSHOPS -->
+  <section class="workshops" id="workshops">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">08 / Workshops</span>
+        <h2 class="section-title">Continuous Learning</h2>
+      </div>
+      <div class="workshop-list reveal-stagger">
+        <div class="workshop-item reveal reveal-right">
+          <div class="workshop-date">2024</div>
+          <div class="workshop-info">
+            <h3 class="workshop-title">Machine Learning Workshop</h3>
+            <p class="workshop-location">Nehru Institute of Engineering & Technology (NIET)</p>
+          </div>
+        </div>
+        <div class="workshop-item reveal reveal-right">
+          <div class="workshop-date">2024</div>
+          <div class="workshop-info">
+            <h3 class="workshop-title">Artificial Intelligence & Data Science Workshop</h3>
+            <p class="workshop-location">NIET (5-Day Intensive Program)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- CREATIVE SKILLS -->
+  <section class="creative-skills" id="creative-skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">09 / Creative Skills</span>
+        <h2 class="section-title">Design Expertise</h2>
+      </div>
+<!-- Creative Skills Row -->
+      <div class="creative-skills-section reveal">
+        <h3 class="creative-skills-title">Creative Expertise</h3>
+        <div class="creative-skills-grid">
+          <!-- Card 1: Creative Tools -->
+          <div class="creative-tool-card">
+            <div class="creative-card-glow"></div>
+            <div class="creative-card-header">
+              <span class="creative-icon">🛠️</span>
+              <h4 class="creative-card-title">Creative Tools</h4>
+            </div>
+            <div class="creative-tool-list">
+              <div class="creative-tool-item">
+                <span class="tool-icon">🎨</span>
+                <span class="tool-name">Canva</span>
+              </div>
+              <div class="creative-tool-item">
+                <span class="tool-icon">🖋️</span>
+                <span class="tool-name">Figma</span>
+              </div>
+              <div class="creative-tool-item">
+                <span class="tool-icon">✂️</span>
+                <span class="tool-name">CapCut</span>
+              </div>
+              <div class="creative-tool-item">
+                <span class="tool-icon">📱</span>
+                <span class="tool-name">VN Editor</span>
+              </div>
+              <div class="creative-tool-item">
+                <span class="tool-icon">🎬</span>
+                <span class="tool-name">Kinemaster</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Creative Skills -->
+          <div class="creative-tool-card">
+            <div class="creative-card-glow"></div>
+            <div class="creative-card-header">
+              <span class="creative-icon">✨</span>
+              <h4 class="creative-card-title">Creative Skills</h4>
+            </div>
+            <div class="creative-skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Poster Design</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Branding</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Social Media Creatives</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Reel Editing</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Video Editing</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+<section class="creative" id="creative">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">10 / Designora Studio</span>
+        <h2 class="section-title">Creative Studio</h2>
+      </div>
+
+      <div class="designora-brand reveal reveal-scale">
+        <div class="brand-content">
+          <div class="brand-info">
+            <h3 class="brand-name">Designora</h3>
+            <p class="brand-tagline">Where logic meets visual art</p>
+            <p class="brand-desc">Apart from development, I create posters, logos, reels, and social media visuals through my creative page <strong>Designora</strong>. I believe a strong visual sense makes me a better full-stack developer.</p>
+            <div class="brand-actions">
+              <a href="https://instagram.com/__designora__" target="_blank" class="btn btn-insta">
+                <span class="insta-icon">📸</span> Visit Designora on Instagram
+              </a>
+            </div>
+          </div>
+          <div class="brand-skills">
+            <div class="creative-tools reveal-stagger">
+              <div class="tool-badge reveal reveal-scale">
+                <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg" alt="Canva">
+                <span>Canva</span>
+              </div>
+              <div class="tool-badge reveal reveal-scale">
+                <span class="tool-emoji">🎥</span>
+                <span>CapCut</span>
+              </div>
+              <div class="tool-badge reveal reveal-scale">
+                <span class="tool-emoji">🎞️</span>
+                <span>VN Editor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- CREATIVE PORTFOLIO SECTION - MASONRY GALLERY -->
+  <section class="creative-portfolio" id="creative-portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">11 / Graphic Designs</span>
+        <h2 class="section-title">Creative Portfolio</h2>
+        <p class="section-desc">A curated gallery of poster designs, branding work, and creative visuals.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="corizo">Corizo</button>
+        <button class="filter-btn" data-filter="poster">Posters</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+      </div>
+
+      <div class="masonry-gallery reveal">
+        <!-- Item 1: Logo 1 -->
+        <div class="masonry-item" data-cat="branding">
+          <img src="assets/logo1.jpeg" alt="Designora Studio Logo" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Branding</span>
+              <h3 class="overlay-title">Olira Brand Identity</h3>
+              <p class="overlay-desc">Sleek typography and packaging design representing a premium lifestyle brand.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 2: Corizo Poster -->
+        <!-- <div class="masonry-item" data-cat="corizo">
+          <img src="assets/corizo_poster.png" alt="Corizo EdTech Poster" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Corizo</span>
+              <h3 class="overlay-title">Corizo EdTech Poster</h3>
+              <p class="overlay-desc">Premium marketing campaign flyer designed to boost student registrations.</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- Item 3: Olira Branding -->
+        <!-- <div class="masonry-item" data-cat="branding">
+          <img src="assets/olira_branding.png" alt="Olira Brand Identity" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Branding</span>
+              <h3 class="overlay-title">Olira Brand Identity</h3>
+              <p class="overlay-desc">Sleek typography and packaging design representing a premium lifestyle brand.</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- Item 4: Corizo Work 1 -->
+        <div class="masonry-item" data-cat="corizo">
+          <img src="assets/corizowork1.jpeg" alt="Corizo Course Launch" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Corizo</span>
+              <h3 class="overlay-title">Corizo Course Launch</h3>
+              <p class="overlay-desc">High-impact social media creative for professional course registrations.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 5: Post 1 -->
+        <div class="masonry-item" data-cat="poster">
+          <img src="assets/post1.png" alt="Typography Poster Art" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Poster</span>
+              <h3 class="overlay-title">Typography Poster Art</h3>
+              <p class="overlay-desc">Experimental graphic layout combining abstract shapes and bold lettering.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 6: Corizo Work 2 -->
+        <div class="masonry-item" data-cat="corizo">
+          <img src="assets/corizowork2.jpeg" alt="Workshop Campaign Flyer" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Corizo</span>
+              <h3 class="overlay-title">Workshop Campaign Flyer</h3>
+              <p class="overlay-desc">Modern digital banner crafted for technical education workshops.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 7: Post 13 -->
+        <div class="masonry-item" data-cat="branding">
+          <img src="assets/post13.jpeg" alt="Tech Rebranding Concept" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Branding</span>
+              <h3 class="overlay-title">Tech Rebranding Concept</h3>
+              <p class="overlay-desc">Minimalist brandmark designed for a developer SaaS platform.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 8: Corizo Work 3 -->
+        <div class="masonry-item" data-cat="corizo">
+          <img src="assets/corizowork3.jpeg" alt="EdTech Achievement Banner" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Corizo</span>
+              <h3 class="overlay-title">EdTech Achievement Banner</h3>
+              <p class="overlay-desc">Social media poster highlighting learner placement records and stats.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 9: Post 3 -->
+        <div class="masonry-item" data-cat="poster">
+          <img src="assets/post3.png" alt="Abstract Cover Design" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Poster</span>
+              <h3 class="overlay-title">Abstract Cover Design</h3>
+              <p class="overlay-desc">Digital layout featuring visual gradients and aesthetic grid elements.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 10: Post 4 -->
+        <div class="masonry-item" data-cat="poster">
+          <img src="assets/post4.jpeg" alt="Cyberpunk Event Poster" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Poster</span>
+              <h3 class="overlay-title">Cyberpunk Event Poster</h3>
+              <p class="overlay-desc">Futuristic poster design styled with neon elements for tech conferences.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 11: Post 14 -->
+        <div class="masonry-item" data-cat="branding">
+          <img src="assets/post14.jpeg" alt="Organic Logo Concept" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Branding</span>
+              <h3 class="overlay-title">Organic Logo Concept</h3>
+              <p class="overlay-desc">Elegant monogram logo designed for a nature-inspired brand.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Item 12: Post 12 -->
+        <div class="masonry-item" data-cat="poster">
+          <img src="assets/post12.jpeg" alt="Creative Studio Showcase" loading="lazy">
+          <div class="masonry-overlay">
+            <div class="overlay-info">
+              <span class="overlay-cat">Poster</span>
+              <h3 class="overlay-title">Creative Studio Showcase</h3>
+              <p class="overlay-desc">Visually engaging flyer highlighting creative services and tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO EDITING SHOWCASE SECTION -->
+  <section class="video-showcase" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">12 / Motion Graphics</span>
+        <h2 class="section-title">Video Editing Showcase</h2>
+        <p class="section-desc">Reels, promotional videos, and motion graphics I've crafted using CapCut, VN Editor & Kinemaster.</p>
+      </div>
+
+      <div class="video-grid reveal-stagger">
+        <!-- Video 1 -->
+        <div class="video-card-item reveal reveal-scale">
+          <div class="video-preview-box">
+            <video src="assets/vid1.mp4" muted loop playsinline class="showcase-video"></video>
+            <div class="video-play-overlay">
+              <div class="showcase-play-btn">▶</div>
+              <span class="play-hint">Watch Edit</span>
+            </div>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag-cat">Promotional Reel</span>
+            <h3 class="video-card-title">Nagarani Jewellery Reel</h3>
+            <p class="video-card-desc">Cinematic editing with fluid transitions, dynamic color grading, and synchronized beat matching.</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card-item reveal reveal-scale">
+          <div class="video-preview-box">
+            <video src="assets/vid2.mp4" muted loop playsinline class="showcase-video"></video>
+            <div class="video-play-overlay">
+              <div class="showcase-play-btn">▶</div>
+              <span class="play-hint">Watch Edit</span>
+            </div>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag-cat">Collection ad</span>
+            <h3 class="video-card-title">Nagarani Jauli Store ad</h3>
+            <p class="video-card-desc">Walk-through animation showing dynamic verification transitions and device mockups.</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card-item reveal reveal-scale">
+          <div class="video-preview-box">
+            <video src="assets/vid3.mp4" muted loop playsinline class="showcase-video"></video>
+            <div class="video-play-overlay">
+              <div class="showcase-play-btn">▶</div>
+              <span class="play-hint">Watch Edit</span>
+            </div>
+          </div>
+          <div class="video-meta">
+            <span class="video-tag-cat">Social Media Promo</span>
+            <h3 class="video-card-title">Nagarani Jauli store reel</h3>
+            <p class="video-card-desc">High-energy marketing reel highlighting dual-module real-time user interfaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- INSTAGRAM DESIGN PAGE SECTION -->
+  <section class="instagram-section" id="instagram">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-tag">13 / Instagram Feed</span>
+        <h2 class="section-title">Latest on Instagram</h2>
+      </div>
+      <div class="insta-container reveal">
+        <div class="insta-profile-header">
+          <div class="insta-avatar">📸</div>
+          <div class="insta-profile-info">
+            <h3 class="insta-handle">@designora</h3>
+            <p class="insta-bio">Visual Storyteller & Creative Designer | Crafting Brand Identities, Posters, and Motion Graphics.</p>
+            <div class="insta-stats">
+              <span><strong>24</strong> posts</span>
+              <span><strong>1.2k</strong> followers</span>
+              <span><strong>350</strong> following</span>
+            </div>
+          </div>
+          <div class="insta-header-action">
+            <a href="https://instagram.com/__designora__" target="_blank" class="btn btn-insta-follow">Follow Page</a>
+          </div>
+        </div>
+
+        <div class="insta-grid">
+          <!-- Item 1 -->
+          <div class="insta-grid-item">
+            <img src="assets/insta_branding.png" alt="Designora Branding Post">
+            <div class="insta-item-overlay">
+              <span>❤️ 154  💬 18</span>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="insta-grid-item">
+            <img src="assets/insta_poster.png" alt="Designora Poster Post">
+            <div class="insta-item-overlay">
+              <span>❤️ 210  💬 24</span>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="insta-grid-item">
+            <img src="assets/insta_social.png" alt="Designora Social Design Post">
+            <div class="insta-item-overlay">
+              <span>❤️ 188  💬 12</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insta-footer-action">
+          <a href="https://instagram.com/__designora__" target="_blank" class="btn btn-insta-more">
+            <span>View More Designs ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">10 / Contact</span>
+        <span class="section-tag">14 / Contact</span>
         <h2 class="section-title">Let's Build Together</h2>
       </div>
       <div class="contact-grid">
@@ -748,6 +1091,7 @@
           <p class="contact-lead">I'm currently open to <strong>internship opportunities</strong>, <strong>freelance
               projects</strong>, and <strong>full-time developer roles</strong> — especially at startups and product
             companies building something meaningful.</p>
+          <p class="contact-freelance">🟢 <strong>Available for freelance poster design and video editing projects.</strong></p>
           <p class="contact-sub">Whether you have a project in mind, want to discuss a role, or just want to talk tech —
             my inbox is always open.</p>
           <div class="contact-links">
@@ -763,6 +1107,16 @@
             <a href="https://github.com/Anisha-deen" class="contact-item" target="_blank">
               <span class="contact-icon">🐙</span>
               <div><span class="contact-label">GitHub</span><span class="contact-value">github.com/Anisha-deen</span>
+              </div>
+            </a>
+            <a href="https://instagram.com/__designora__" class="contact-item" target="_blank">
+              <span class="contact-icon">📸</span>
+              <div><span class="contact-label">Instagram</span><span class="contact-value">instagram.com/__designora__</span>
+              </div>
+            </a>
+            <a href="https://wa.me/918111098587?text=Hi%20Anisha,%20I'm%20interested%20in%20a%20project!" class="contact-item whatsapp-item" target="_blank">
+              <span class="contact-icon">💬</span>
+              <div><span class="contact-label">WhatsApp</span><span class="contact-value">Chat on WhatsApp</span>
               </div>
             </a>
             <div class="contact-item no-link">
@@ -851,9 +1205,11 @@
       </div>
       <div class="footer-nav">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#skills">Tech Stack</a>
         <a href="#projects">Projects</a>
+        <a href="#gallery">UI/UX Design</a>
+        <a href="#experience">Experience</a>
+        <a href="#creative-portfolio">Creative Work</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-bottom">

@@ -42,7 +42,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active');
-      
+
       // Trigger running numbers if it's an impact item
       const num = entry.target.querySelector('.impact-num');
       if (num && !num.classList.contains('animated')) {
@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
     const targetStr = stat.textContent.trim();
     const isPlus = targetStr.includes('+');
     const target = parseInt(targetStr.replace('+', ''));
-    
+
     let startTimestamp = null;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
@@ -99,10 +99,10 @@ magneticBtns.forEach(btn => {
     const rect = btn.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    
+
     btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
   });
-  
+
   btn.addEventListener('mouseleave', () => {
     btn.style.transform = '';
   });
@@ -118,11 +118,11 @@ const blobs = document.querySelectorAll('.blob');
 window.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
-  
+
   // Parallax blobs
   const x = (window.innerWidth / 2 - e.clientX) / 25;
   const y = (window.innerHeight / 2 - e.clientY) / 25;
-  
+
   blobs.forEach((blob, index) => {
     const factor = (index + 1) * 0.5;
     blob.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
@@ -146,10 +146,12 @@ window.addEventListener('scroll', () => {
 // ===== TYPING EFFECT ON HERO ROLE =====
 const heroRole = document.querySelector('.hero-role');
 const roles = [
-  'React Native Developer',
   'Full Stack Developer',
-  'Mobile App Developer',
-  'Real-Time Systems Builder'
+  'React Native Developer',
+  'Frontend Developer',
+  'Graphic Designer',
+  'Video Editor',
+  'Creative Designer'
 ];
 let roleIndex = 0;
 let charIndex = 0;
@@ -214,6 +216,9 @@ addTouchEffect('.workshop-item');
 addTouchEffect('.exp-card');
 addTouchEffect('.gallery-item');
 addTouchEffect('.design-card');
+addTouchEffect('.portfolio-card');
+addTouchEffect('.video-card-item');
+addTouchEffect('.insta-grid-item');
 
 // =============================================
 // LIGHTBOX — Gallery & Creative section
@@ -222,14 +227,14 @@ addTouchEffect('.design-card');
 // Close → ✕ button | backdrop click | Escape key
 // =============================================
 (function () {
-  const lightbox       = document.getElementById('lightbox');
-  const backdrop       = document.getElementById('lightboxBackdrop');
-  const closeBtn       = document.getElementById('lightboxClose');
-  const caption        = document.getElementById('lightboxCaption');
-  const imgWrap        = document.getElementById('lightboxImgWrap');
-  const lightboxImg    = document.getElementById('lightboxImg');
-  const videoWrap      = document.getElementById('lightboxVideoWrap');
-  const lightboxVideo  = document.getElementById('lightboxVideo');
+  const lightbox = document.getElementById('lightbox');
+  const backdrop = document.getElementById('lightboxBackdrop');
+  const closeBtn = document.getElementById('lightboxClose');
+  const caption = document.getElementById('lightboxCaption');
+  const imgWrap = document.getElementById('lightboxImgWrap');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const videoWrap = document.getElementById('lightboxVideoWrap');
+  const lightboxVideo = document.getElementById('lightboxVideo');
 
   if (!lightbox) return; // safety guard
 
@@ -239,7 +244,7 @@ addTouchEffect('.design-card');
     lightboxImg.src = src;
     lightboxImg.alt = alt || '';
     caption.textContent = alt || '';
-    imgWrap.style.display   = 'flex';
+    imgWrap.style.display = 'flex';
     videoWrap.style.display = 'none';
     // Reset any leftover video
     lightboxVideo.pause();
@@ -251,11 +256,11 @@ addTouchEffect('.design-card');
     lightboxVideo.src = src;
     lightboxVideo.muted = false;    // sound ON in lightbox
     caption.textContent = label || '';
-    imgWrap.style.display   = 'none';
+    imgWrap.style.display = 'none';
     videoWrap.style.display = 'flex';
     showLightbox();
     // Small delay so the DOM is visible before play()
-    setTimeout(() => lightboxVideo.play().catch(() => {}), 80);
+    setTimeout(() => lightboxVideo.play().catch(() => { }), 80);
   }
 
   function showLightbox() {
@@ -277,7 +282,7 @@ addTouchEffect('.design-card');
     // Stop video & release src so browser stops buffering
     lightboxVideo.pause();
     lightboxVideo.src = '';
-    lightboxImg.src   = '';
+    lightboxImg.src = '';
     document.body.style.overflow = '';
   }
 
@@ -300,7 +305,7 @@ addTouchEffect('.design-card');
     box.addEventListener('click', () => {
       // Use dataset label from the overlay span, else fall back to alt
       const label = box.querySelector('.gallery-overlay span')?.textContent
-                    || img.alt || '';
+        || img.alt || '';
       openImage(img.src, label);
     });
   });
@@ -309,13 +314,13 @@ addTouchEffect('.design-card');
   // Images → image mode, Videos → video mode
 
   document.querySelectorAll('.design-card .design-img-box').forEach(box => {
-    const img   = box.querySelector('img');
+    const img = box.querySelector('img');
     const video = box.querySelector('video');
 
     // Label from the overlay title span
     const label = box.querySelector('.design-title')?.textContent
-                  || box.querySelector('.design-cat')?.textContent
-                  || '';
+      || box.querySelector('.design-cat')?.textContent
+      || '';
 
     if (video) {
       // Card has a video — open in video lightbox
@@ -328,6 +333,42 @@ addTouchEffect('.design-card');
     }
   });
 
+  // ── Attach to Creative Portfolio Masonry items ───────────────────────────
+  document.querySelectorAll('.masonry-item').forEach(box => {
+    const img = box.querySelector('img');
+    if (!img) return;
+
+    box.addEventListener('click', () => {
+      const label = box.querySelector('.overlay-title')?.textContent
+        || img.alt 
+        || '';
+      openImage(img.src, label);
+    });
+  });
+
+  // ── Attach to Video Editing Showcase items ───────────────────────────────
+  document.querySelectorAll('.video-preview-box').forEach(box => {
+    const video = box.querySelector('video');
+    if (!video) return;
+
+    // Open video lightbox on click
+    const card = box.closest('.video-card-item');
+    const label = card?.querySelector('.video-card-title')?.textContent?.trim() || '';
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', () => {
+      openVideo(video.src || video.currentSrc, label);
+    });
+
+    // Play preview on hover
+    box.addEventListener('mouseenter', () => {
+      video.play().catch(() => { });
+    });
+    box.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
   // ── Attach to Projects section video boxes ───────────────────────────────
   // Each .project-video-box contains a looping muted preview video.
   // Clicking it opens the same video in the lightbox WITH sound + controls.
@@ -337,7 +378,7 @@ addTouchEffect('.design-card');
     if (!video) return;
 
     // Grab the project title from the nearest parent card
-    const card  = box.closest('.project-card');
+    const card = box.closest('.project-card');
     const label = card?.querySelector('.project-title')?.textContent?.trim() || '';
 
     box.style.cursor = 'pointer';
@@ -356,10 +397,10 @@ addTouchEffect('.design-card');
 // states inline, then clears the form on success.
 // =============================================
 (function () {
-  const form        = document.getElementById('contactForm');
-  const submitBtn   = document.getElementById('submitBtn');
-  const successBox  = document.getElementById('formSuccess');
-  const errorBox    = document.getElementById('formError');
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const successBox = document.getElementById('formSuccess');
+  const errorBox = document.getElementById('formError');
 
   // Guard: do nothing if the contact section isn't on this page
   if (!form) return;
@@ -375,29 +416,29 @@ addTouchEffect('.design-card');
   /** Show the success banner and hide the error banner */
   function showSuccess() {
     successBox.hidden = false;
-    errorBox.hidden   = true;
+    errorBox.hidden = true;
     // Auto-hide the success message after 8 seconds
     setTimeout(() => { successBox.hidden = true; }, 8000);
   }
 
   /** Show the error banner and hide the success banner */
   function showError() {
-    errorBox.hidden   = false;
+    errorBox.hidden = false;
     successBox.hidden = true;
   }
 
   /** Hide both feedback banners */
   function hideFeedback() {
     successBox.hidden = true;
-    errorBox.hidden   = true;
+    errorBox.hidden = true;
   }
 
   // ── Manual HTML5-style validation ────────────────────────────────────────
   // novalidate is set on the form so we control the UX ourselves.
 
   function validateForm() {
-    const name    = form.querySelector('#name');
-    const email   = form.querySelector('#email');
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
     const message = form.querySelector('#message');
 
     // Trim whitespace before checking
@@ -446,14 +487,14 @@ addTouchEffect('.design-card');
     try {
       // Build the payload from form fields
       const formData = new FormData(form);
-      const payload  = Object.fromEntries(formData.entries());
+      const payload = Object.fromEntries(formData.entries());
 
       // POST to Web3Forms API as JSON
       const response = await fetch('https://api.web3forms.com/submit', {
-        method:  'POST',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept':        'application/json'
+          'Accept': 'application/json'
         },
         body: JSON.stringify(payload)
       });
@@ -477,5 +518,42 @@ addTouchEffect('.design-card');
       // Always re-enable the button regardless of outcome
       setLoading(false);
     }
+  });
+})();
+
+// ===== MASONRY GALLERY FILTER =====
+(function () {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const masonryItems = document.querySelectorAll('.masonry-item');
+
+  if (!filterBtns.length || !masonryItems.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active states on buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      masonryItems.forEach(item => {
+        const itemCat = item.getAttribute('data-cat');
+        if (filterValue === 'all' || itemCat === filterValue) {
+          item.classList.remove('hidden');
+          // Re-trigger visual fade-in entry animation
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(10px) scale(0.98)';
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0) scale(1)';
+            }, 50);
+          });
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
   });
 })();
